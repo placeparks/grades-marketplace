@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	color-scheme: dark;
+}
+
+body {
+	color: black;
+	background:#FAFAF4;
+	--color-primary: #fada3f;
+	--color-secondary: #ff2136;
+	--color-tertiary: #0294fe;
+	--color-quaternary: #9b4dff;
+	--card-background: #252133;
+	--highlighted-background: #202326;
+	font-weight: 400;
+}
+
+.gradient {
+	@apply bg-gradient-to-tl from-[#0294fe] to-[#9b4dff];
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+h3 {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* Sell.css */
+.content-container {
+	position: relative;
+	z-index: 1;
+	padding: 12px;
+  }
+  
+  .bgsection {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/CSbg.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+	z-index: 0;
+  }
+  
+  .connectButtonWrapper {
+	position: relative !important;
+	display: inline-block !important;
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+	transition: all 0.3s !important;
+	border-radius: 9999px !important;
+	overflow: hidden !important;
+	z-index: 10 !important;
+	font-family: "Montserrat", sans-serif !important;
+	font-weight: bold !important;
+	font-size: 21.5px !important;
+	background-color: #e63b51 !important;
+	border: 2px solid black !important;
+	text-align: center !important;
+  }
+  
+  .connectButtonWrapper::after {
+	content: "" !important;
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	background-color: #ffba00 !important;
+	border-radius: 9999px !important;
+	z-index: -2 !important;
+  }
+  
+  .connectButtonWrapper::before {
+	content: "" !important;
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	width: 0% !important;
+	height: 100% !important;
+	background-color: #e63b51 !important;
+	transition: all 0.3s !important;
+	border-radius: 9999px !important;
+	z-index: -1 !important;
+  }
+  
+  .connectButtonWrapper:hover::before {
+	width: 100% !important;
+  }
