@@ -7,7 +7,7 @@ import { getContract, defineChain } from "thirdweb";
 export const NETWORK = defineChain(534351);
 
 // 2. The address of the marketplace V3 smart contract.
-const MARKETPLACE_ADDRESS = "0x581eeF964843105D4c3af0E09B0952EA70F11075";
+export const MARKETPLACE_ADDRESS = "0x581eeF964843105D4c3af0E09B0952EA70F11075";
 export const MARKETPLACE = getContract({
 	address: MARKETPLACE_ADDRESS,
 	client,

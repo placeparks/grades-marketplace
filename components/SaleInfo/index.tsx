@@ -49,7 +49,7 @@ export default function SaleInfo({ nft }: Props) {
           >
 						Direct
           </h3>
-          <h3
+          {/* <h3
             className={cn(
               "px-4 h-12 flex items-center justify-center text-base font-semibold cursor-pointer transition-all hover:text-blue/80",
               tab === "auction" &&
@@ -58,7 +58,7 @@ export default function SaleInfo({ nft }: Props) {
             onClick={() => setTab("auction")}
           >
 						Auction
-          </h3>
+          </h3>*/}
         </div>
 
         {/* Direct listing fields */}
@@ -93,7 +93,7 @@ export default function SaleInfo({ nft }: Props) {
         </div>
 
         {/* Auction listing fields */}
-        <div
+        {/*<div
           className={cn(
             tab === "auction" ? "flex" : "hidden",
             "flex-col"
@@ -145,6 +145,7 @@ export default function SaleInfo({ nft }: Props) {
             />
           )}
         </div>
+        */}
       </div>
     </>
   );

@@ -123,7 +123,7 @@ export default async function TokenPage({
 								"Not for sale"
 							)}
 						</div>
-						<div>
+						{/*<div>
 							{auctionListing && (
 								<>
 									<p
@@ -148,7 +148,7 @@ export default async function TokenPage({
 									</div>
 								</>
 							)}
-						</div>
+						</div>*/}
 					</div>
 				</div>
 				<div className="flex flex-col">
@@ -157,14 +157,14 @@ export default async function TokenPage({
 						auctionListing={auctionListing}
 					/>
 
-					<div className="flex justify-center w-full my-4 text-center">
+					{/*<div className="flex justify-center w-full my-4 text-center">
 						<p className="text-black/60">or</p>
 					</div>
 					<MakeOfferButton
 						auctionListing={auctionListing}
 						directListing={directListing}
-					/>
-				</div>
+					/>*/}
+						</div>
 			</div>
 		</div>
 	);
