@@ -11,7 +11,7 @@ import toastStyle from "@/util/toastConfig";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { revalidatePath } from "next/cache";
-import MarketplaceComponent from "../MarketplaceComponent";
+
 
 export default function MakeOfferButton({
 	auctionListing,
@@ -89,7 +89,7 @@ export default function MakeOfferButton({
 			>
 				Make Offer
 			</TransactionButton>
-<MarketplaceComponent/>
+
 		</div>
 	);
 }
