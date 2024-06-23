@@ -1,4 +1,6 @@
 import client from "@/lib/client";
+import { getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc721";
+
 /** Replace the values below with the addresses of your smart contracts. */
 
 // 1. Set up the network your smart contracts are deployed to.
@@ -14,13 +16,29 @@ export const MARKETPLACE = getContract({
 	chain: NETWORK,
 });
 
+// Define the return type of getAllNFTs function
+interface FetchedNFT {
+	metadata: {
+	  id: bigint;
+	  [key: string]: any;
+	};
+	owner: string | null;
+	id: bigint;
+	tokenURI: string;
+	type: "ERC721";
+  }
+  
+
+  
 // 3. The address of your NFT collection smart contract.
-const NFT_COLLECTION_ADDRESS = "0x4A0C62131FB90201c79266B1C75622a845f14b61";
+export const NFT_COLLECTION_ADDRESS = "0x4A0C62131FB90201c79266B1C75622a845f14b61";
 export const NFT_COLLECTION = getContract({
 	address: NFT_COLLECTION_ADDRESS,
 	client,
 	chain: NETWORK,
 });
+
+
 
 // (Optional) Set up the URL of where users can view transactions on
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
